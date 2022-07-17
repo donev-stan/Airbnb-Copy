@@ -1,0 +1,160 @@
+header {
+	height: 80px;
+	border-bottom: 1px solid #dddddd;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 1;
+}
+
+.logo,
+.middle-menu,
+.right-menu {
+	display: flex;
+	flex: 1;
+
+	/* border: 1px solid salmon; */
+}
+
+.logo {
+	align-items: center;
+}
+
+.logo img {
+	width: 115px;
+	height: 35px;
+	cursor: pointer;
+	/* content: url("../images/full_logo.png"); */
+}
+
+.middle-menu {
+	justify-content: center;
+	align-items: center;
+	flex: 2;
+}
+
+.middle-menu .menu-btns {
+	cursor: pointer;
+	border-radius: 50px;
+	padding: 5px;
+	border: 1px solid #dddddd;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+.middle-menu .menu-btns:hover {
+	transition: box-shadow 0.2s ease;
+	box-shadow: 0 1px 8px rgb(0 0 0 / 12%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+.middle-menu .menu-btns span {
+	margin-left: -5px;
+	border-right: 1px solid lightgray;
+}
+
+.middle-menu .menu-btns button {
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+	background-color: white;
+	padding: 0 20px;
+	z-index: -1;
+}
+
+.middle-menu .menu-btns button:last-child {
+	padding: 10px 11px;
+
+	border-radius: 100%;
+	background-color: #ff385c;
+}
+
+.right-menu {
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.right-menu button {
+	cursor: pointer;
+	padding: 8px 5px 8px 12px;
+	margin-left: 5px;
+	display: flex;
+	gap: 10px;
+	background-color: white;
+	border: 1px solid lightgray;
+	border-radius: 50px;
+	align-items: center;
+}
+
+.right-menu button:hover {
+	transition: box-shadow 0.2s ease;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+.right-menu button .fa-bars,
+.right-menu .fa-circle-user {
+	font-size: large;
+	color: gray;
+}
+
+.right-menu button .fa-circle-user {
+	font-size: x-large;
+}
+
+.right-menu p,
+.right-menu > i {
+	cursor: pointer;
+	padding: 10px;
+	margin: 0;
+}
+
+.right-menu p:hover,
+.right-menu > i:hover {
+	background-color: #f0f0f0;
+	border-radius: 50px;
+	padding: 10px;
+}
+
+@media (max-width: 1376px) {
+	.right-menu {
+		gap: 0px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.logo img {
+		content: url("../images/logo.png");
+		width: 38px;
+	}
+
+	.logo {
+		max-width: 60px;
+	}
+
+	.middle-menu {
+		flex: 3;
+		justify-content: flex-end;
+	}
+
+	.right-menu {
+		flex: 2;
+	}
+}
+
+@media (max-width: 868px) {
+	.middle-menu {
+		justify-content: center;
+	}
+
+	.middle-menu .menu-btns button {
+		font-size: 14px;
+		padding: 0 10px;
+	}
+
+	.middle-menu .menu-btns button:last-child {
+		padding: 5px 5px 5px 6px;
+	}
+
+	.right-menu {
+		font-size: 14px;
+		text-align: center;
+	}
+}

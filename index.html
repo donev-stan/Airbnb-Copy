@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Vacation Homes & Condo Rentals - Airbnb</title>
+</head>
+
+<body>
+
+    <!-- Page should be responsive >= ~700px  -->
+
+    <!-- Everything -->
+    <div class="body-container">
+
+        <!-- Header -->
+        <header>
+
+            <!-- Header Items Container -->
+            <div class="container">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="./images/full_logo.png" alt="Airbnb">
+                </div>
+
+                <!-- Middle Menu -->
+                <div class="middle-menu">
+                    <div class="menu-btns">
+                        <button>Anywhere</button>
+                        <span></span>
+                        <button>Any week</button>
+                        <span></span>
+                        <button style="color: gray;">Add guests</button>
+                        <button><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></button>
+                    </div>
+                </div>
+
+                <!-- Right Menu -->
+                <div class="right-menu">
+                    <p>Become a Host</p>
+                    <i class="fa-solid fa-globe" style="margin-top: 1px; font-size: 17px;"></i>
+                    <button><i class="fa-solid fa-bars"></i><i class="fa-solid fa-circle-user"></i></button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Filters -->
+        <div class="filters">
+            <div class="container">
+
+                <!-- Filter Chips -->
+                <div class="chips">
+                    <div class="chip">
+                        <img src="./images/filter_icons/islands.jpg" alt="Islands">
+                        <p>Islands</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/parks.jpg" alt="National Parks">
+                        <p>Parks</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/chalets.jpg" alt="Chalets">
+                        <p>Chalets</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/omg.jpg" alt="OMG">
+                        <p>OMG!</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/beach.jpg" alt="Beach">
+                        <p>Beach</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/lakefront.jpg" alt="Lakefront">
+                        <p>Lakefront</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/arctic.jpg" alt="Arctic">
+                        <p>Arctic</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/design.jpg" alt="Design">
+                        <p>Design</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/camping.jpg" alt="Camping">
+                        <p>Camping</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/skiing.jpg" alt="Skiing">
+                        <p>Skiing</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/farms.jpg" alt="Farms">
+                        <p>Farms</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/castles.jpg" alt="Castles">
+                        <p>Castles</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/tropical.jpg" alt="Tropical">
+                        <p>Tropical</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/luxe.jpg" alt="Luxe">
+                        <p>Luxe</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/surfing.jpg" alt="Surfing">
+                        <p>Surfing</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/campers.jpg" alt="Campers">
+                        <p>Campers</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/boats.jpg" alt="Boats">
+                        <p>Boats</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/towers.jpg" alt="Towers">
+                        <p>Towers</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/windmills.jpg" alt="Windmills">
+                        <p>Windmills</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/desert.jpg" alt="Desert">
+                        <p>Desert</p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="./images/filter_icons/aframes.jpg" alt="A-frames">
+                        <p>A-frames</p>
+                    </div>
+
+                    <div class="fadeout0"></div>
+                    <div class="fadeout1"></div>
+                    <div class="fadeout2"></div>
+                    <div class="fadeout3"></div>
+                    <div class="fadeout4"></div>
+                    <div class="fadeout5"></div>
+                    <div class="fadeout6"></div>
+                    <div class="fadeout7"></div>
+                    <div class="fadeout8"></div>
+                    <div class="fadeout9"></div>
+                    <div class="fadeout10"></div>
+
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="btns">
+                    <div class="more-chips">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+
+                    <div class="filter-btn">
+                        <button>
+                            <span>
+                                <i class="fa-solid fa-arrow-down-short-wide"></i>
+                            </span>
+                            <span>
+                                Filters
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Main -->
+        <main>
+            <div class="container">
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo1.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo2.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo3.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo4.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo5.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo6.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo7.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo8.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo9.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo10.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo11.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo12.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo13.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo14.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+
+                        <img src="./images/destinations/photo15.webp" alt="">
+                        <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="name-and-rating-box">
+                            <h4 class="heading">Badachro, Uk</h3>
+                                <span class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    4.71
+                                </span>
+                        </div>
+                        <p>2,623 kilometers away <br> Nov 17 - 24 </p>
+
+                        <b>303 лв. </b> night
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+
+            <!-- Show Map Button -->
+            <button id="map-btn">Show map <i class="fa-solid fa-map"></i></button>
+
+            <div class="container">
+
+                <div class="left-box">
+
+                    &copy; 2022 Airbnb, Inc.
+                    &nbsp;·&nbsp;
+                    <a href="">Privacy</a>
+                    &nbsp;·&nbsp;
+                    <a href="">Terms</a>
+                    &nbsp;·&nbsp;
+                    <a href="">Sitemap</a>
+                    &nbsp;·&nbsp;
+                    <a href="">Destinations</a>
+                </div>
+
+                <div class="right-box">
+                    <i class="fa-solid fa-globe" style="margin-top: 1px; font-size: 17px;"></i>
+                    <a href="">English (US)</a>
+                    <a href="">лв BGN</a>
+                    <a href="">Support & resources </a>
+                    <i class="fa-solid fa-angle-up" style="margin-top: 2px; font-size: 17px; cursor: pointer;"></i>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Since 
+        /* html:not([data-scroll='0']) .filters {
+                box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+            }
+        */
+        // is not working.... =>
+
+        window.onscroll = () => {
+            if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+                document.querySelector(".filters").classList.add("shadow")
+            } else {
+                document.querySelector(".filters").classList.remove("shadow");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+main {
+	margin-bottom: 110px;
+}
+
+.box {
+	cursor: pointer;
+	height: fit-content;
+
+	opacity: 1;
+}
+
+.box:hover {
+	transition: transform 0.3s ease;
+	transition: opacity 0.4s ease;
+	opacity: 0.9;
+	transform: translateY(-1px);
+}
+
+main .container {
+	gap: 40px 10px;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	padding: 10px 0;
+}
+
+.img-box {
+	position: relative;
+}
+
+.img-box .heart-btn {
+	position: absolute;
+	top: 4%;
+	right: 4%;
+	font-size: 27px;
+	background-color: transparent;
+	border: none;
+
+	color: white;
+	cursor: pointer;
+}
+
+.img-box img {
+	width: 280px;
+	height: 270px;
+	border-radius: 20px;
+	vertical-align: bottom;
+	object-fit: cover;
+}
+
+.name-and-rating-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.name-and-rating-box .heading,
+.name-and-rating-box .rating {
+	margin: 10px 0 0 0;
+}
+
+.info-box p {
+	margin: 10px 0;
+	color: gray;
+}

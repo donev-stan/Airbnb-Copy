@@ -1,0 +1,19 @@
+@import url(./header.css);
+@import url(./filter.css);
+@import url(./main.css);
+@import url(./footer.css);
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+.container {
+	height: 100%;
+	width: 85%;
+	margin: auto;
+
+	display: flex;
+	overflow: hidden;
+}
