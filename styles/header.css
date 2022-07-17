@@ -89,8 +89,12 @@ header {
 	box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
 }
 
-.right-menu button .fa-bars,
-.right-menu .fa-circle-user {
+.right-menu button .fa-bars {
+	font-size: large;
+	color: black;
+}
+
+.right-menu button .fa-circle-user {
 	font-size: large;
 	color: gray;
 }
