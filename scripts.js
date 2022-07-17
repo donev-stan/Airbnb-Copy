@@ -50,7 +50,7 @@ function onScrollRightClick() {
 	document.querySelector(".chips").scrollLeft -= 70;
 
 	// Remove Arrow from DOM
-	if (document.querySelector(".chips").scrollLeft === 70) {
+	if (document.querySelector(".chips").scrollLeft <= 70) {
 		document.querySelector(".chips-scrollRight").style.display = "none";
 	}
 }
