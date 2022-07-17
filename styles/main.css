@@ -40,18 +40,30 @@ main .container {
 	cursor: pointer;
 }
 
+.img-box .heart-btn .fa-heart {
+	text-shadow: 0px 2px 20px rgba(0, 0, 0, 1);
+	transition: color 0.5s ease;
+}
+
+.favourite {
+	transition: color 0.5s ease;
+	color: red;
+}
+
 .img-box img {
 	width: 280px;
 	height: 270px;
 	border-radius: 20px;
 	vertical-align: bottom;
 	object-fit: cover;
+	box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.15);
 }
 
 .name-and-rating-box {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	/* margin-top: 10px; */
 }
 
 .name-and-rating-box .heading,
@@ -62,4 +74,22 @@ main .container {
 .info-box p {
 	margin: 10px 0;
 	color: gray;
+}
+
+@media (max-width: 680px) {
+	main .container {
+		width: 95%;
+	}
+
+	.img-box img {
+		width: 230px;
+		height: 220px;
+	}
+}
+
+@media (max-width: 500px) {
+	.img-box img {
+		width: 280px;
+		height: 270px;
+	}
 }

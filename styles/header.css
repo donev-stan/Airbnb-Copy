@@ -158,3 +158,20 @@ header {
 		text-align: center;
 	}
 }
+
+@media (max-width: 700px) {
+	.middle-menu span,
+	.middle-menu button:not(:last-child) {
+		display: none;
+	}
+
+	.middle-menu .menu-btns button:last-child {
+		font-size: large;
+		margin: 0 7px;
+		padding: 7px 10px;
+	}
+
+	.logo {
+		margin-right: 5px;
+	}
+}

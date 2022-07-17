@@ -84,3 +84,16 @@ footer #map-btn .fa-map {
 		gap: 10px;
 	}
 }
+
+@media (max-width: 530px) {
+	.left-box,
+	.right-box {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 367px) {
+	footer {
+		padding: 10px 0;
+	}
+}
