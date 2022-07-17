@@ -13,11 +13,6 @@
 	z-index: 1;
 }
 
-/* Not working */
-/* html:not([data-scroll='0']) .filters {
-	box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
-} */
-
 .shadow {
 	box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
 }
@@ -38,23 +33,174 @@
 	overflow-x: hidden;
 
 	position: relative;
+
+	scroll-behavior: smooth;
 }
 
-.fadeout0,
-.fadeout1,
-.fadeout2,
-.fadeout3,
-.fadeout4,
-.fadeout5,
-.fadeout6,
-.fadeout7,
-.fadeout8,
-.fadeout9,
-.fadeout10 {
+.filters .btns {
+	display: flex;
+	gap: 20px;
+}
+
+.chip {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	opacity: 0.7;
+	transition: opacity 0.2s ease;
+
+	cursor: pointer;
+}
+
+.chip img {
+	max-width: 25px;
+}
+
+.chip p {
+	margin: 10px 0 5px 0;
+	text-align: center;
+	font-size: 14px;
+}
+
+.chip:hover:not(.active) {
+	border-bottom: 2px solid #dddddd;
+	opacity: 1;
+}
+
+.chips-scrollLeft {
+	display: flex;
+	align-items: center;
+	margin-top: -7px;
+
+	margin-left: 7px;
+}
+
+.chips-scrollRight {
+	/* display: flex; */
+	align-items: center;
+	margin-top: -7px;
+
+	margin-right: 7px;
+
+	/* Here */
+	display: none;
+}
+
+.fa-angle-left {
+	border: 1px solid gray;
+	padding: 6px 10px;
+	border-radius: 100%;
+}
+
+.fa-angle-right {
+	border: 1px solid gray;
+	padding: 6px 10px;
+	border-radius: 100%;
+}
+
+.filter-btn button:hover {
+	cursor: pointer;
+	transform: translateY(-1px);
+	transition: box-shadow 0.2s ease;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+.fa-angle-right:hover,
+.fa-angle-left:hover {
+	cursor: pointer;
+	transform: translateY(-1px);
+	transition: box-shadow 0.2s ease;
+	box-shadow: rgb(0 0 0 / 16%) 0 0 10px;
+}
+
+.filter-btn {
+	display: flex;
+	align-items: center;
+	margin-top: -7px;
+}
+
+.filter-btn button {
+	display: flex;
+	gap: 8px;
+	height: 50px;
+	padding: 15px;
+	background-color: inherit;
+	border: 1px solid #dddddd;
+	border-radius: 15px;
+}
+
+/* Fadeouts Left */
+.fadeoutLeft {
 	position: absolute;
 	height: 100%;
 	width: 7px;
-	right: 0;
+	left: 0px;
+	opacity: 1;
+	background-color: white;
+
+	/* HERE  */
+	display: none;
+}
+
+.fadeout-1 {
+	left: 7px;
+	opacity: 0.9;
+}
+
+.fadeout-2 {
+	left: 14px;
+	opacity: 0.8;
+}
+
+.fadeout-3 {
+	left: 21px;
+	opacity: 0.7;
+}
+
+.fadeout-4 {
+	left: 28px;
+	opacity: 0.6;
+}
+
+.fadeout-5 {
+	left: 35px;
+	opacity: 0.5;
+}
+
+.fadeout-6 {
+	left: 42px;
+	opacity: 0.4;
+}
+
+.fadeout-7 {
+	left: 49px;
+	opacity: 0.3;
+}
+
+.fadeout-8 {
+	left: 56px;
+	opacity: 0.2;
+}
+
+.fadeout-9 {
+	left: 63px;
+	opacity: 0.1;
+}
+
+.fadeout-10 {
+	left: 70px;
+	opacity: 0;
+}
+
+/* Fadeouts Right*/
+.fadeoutRight {
+	position: absolute;
+	height: 100%;
+	width: 7px;
+	right: 0px;
 	opacity: 1;
 	background-color: white;
 }
@@ -107,81 +253,4 @@
 .fadeout10 {
 	right: 70px;
 	opacity: 0;
-}
-
-.filters .btns {
-	display: flex;
-	gap: 20px;
-}
-
-.chip {
-	display: flex;
-	flex-direction: column;
-
-	justify-content: center;
-	align-items: center;
-
-	opacity: 0.7;
-	transition: opacity 0.2s ease;
-
-	cursor: pointer;
-}
-
-.chip img {
-	max-width: 25px;
-}
-
-.chip p {
-	margin: 10px 0 5px 0;
-	text-align: center;
-	font-size: 14px;
-}
-
-.chip:hover:not(.active) {
-	border-bottom: 2px solid #dddddd;
-	opacity: 1;
-}
-
-.more-chips {
-	display: flex;
-	align-items: center;
-	margin-top: -7px;
-}
-
-.fa-angle-right {
-	/* border: 1px solid #dddddd; */
-	border: 1px solid gray;
-	padding: 6px 10px;
-	/* margin-left: 5px; */
-	border-radius: 100%;
-}
-
-.filter-btn button:hover {
-	cursor: pointer;
-	transform: translateY(-1px);
-	transition: box-shadow 0.2s ease;
-	box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
-}
-
-.fa-angle-right:hover {
-	cursor: pointer;
-	transform: translateY(-1px);
-	transition: box-shadow 0.2s ease;
-	box-shadow: rgb(0 0 0 / 16%) 0 0 10px;
-}
-
-.filter-btn {
-	display: flex;
-	align-items: center;
-	margin-top: -7px;
-}
-
-.filter-btn button {
-	display: flex;
-	gap: 8px;
-	height: 50px;
-	padding: 15px;
-	background-color: inherit;
-	border: 1px solid #dddddd;
-	border-radius: 15px;
 }
