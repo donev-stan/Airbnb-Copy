@@ -31,6 +31,8 @@
 	/* position: relative; */
 
 	scroll-behavior: smooth;
+
+	margin-top: 5px;
 }
 
 .chip {
@@ -110,7 +112,7 @@
 .filter-btn-div {
 	display: flex;
 	align-items: center;
-	margin-top: -7px;
+	margin-top: -5px;
 }
 
 .filter-btn-div button {
