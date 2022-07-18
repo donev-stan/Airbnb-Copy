@@ -38,12 +38,12 @@
 	gap: 30px;
 }
 
-.close-modal-btn {
+.close-modal-btn-div {
 	display: flex;
 	align-items: flex-start;
 }
 
-.close-modal-btn button {
+.close-modal-btn-div button {
 	background-color: white;
 	border: none;
 	color: #aaaaaa;
@@ -55,8 +55,8 @@
 	border-radius: 100%;
 }
 
-.close-modal-btn button:hover,
-.close-modal-btn button:focus {
+.close-modal-btn-div button:hover,
+.close-modal-btn-div button:focus {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;

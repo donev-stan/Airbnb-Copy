@@ -74,7 +74,7 @@ const elements = {
 		.addEventListener("click", () => openModal());
 
 	document
-		.querySelector(".close-modal-btn")
+		.querySelector(".close-modal-btn-div")
 		.addEventListener("click", () => closeModal());
 
 	// User Menu

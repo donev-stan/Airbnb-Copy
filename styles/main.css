@@ -1,5 +1,14 @@
 main {
+	/* To leave space for the "Show Map Button" */
 	margin-bottom: 110px;
+}
+
+main .container {
+	gap: 40px 10px;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	padding: 10px 0;
 }
 
 .box {
@@ -15,14 +24,6 @@ main {
 	transition: opacity 0.4s ease;
 	opacity: 0.9;
 	/* transform: translateY(-1px); */
-}
-
-main .container {
-	gap: 40px 10px;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	padding: 10px 0;
 }
 
 .img-box {

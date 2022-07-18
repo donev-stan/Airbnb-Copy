@@ -17,29 +17,20 @@
 	box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
 }
 
-.active {
-	opacity: 1;
-	border-bottom: 2px solid black;
-}
-
 .filters .container {
 	display: flex;
 	justify-content: space-between;
 }
 
-.filters .chips {
+.chips {
 	display: flex;
 	gap: 30px;
 	overflow-x: hidden;
 
-	position: relative;
+	/* For the fadeout divs Im not using anymore cuz they are pain in the ass to work with */
+	/* position: relative; */
 
 	scroll-behavior: smooth;
-}
-
-.filters .btns {
-	display: flex;
-	gap: 20px;
 }
 
 .chip {
@@ -53,6 +44,11 @@
 	transition: opacity 0.2s ease;
 
 	cursor: pointer;
+}
+
+.active {
+	opacity: 1;
+	border-bottom: 2px solid black;
 }
 
 .chip img {
@@ -78,34 +74,24 @@
 	margin-left: 7px;
 }
 
-.chips-scrollRight {
-	/* display: flex; */
-	align-items: center;
-	margin-top: -7px;
-
-	margin-right: 7px;
-
-	/* Here */
-	display: none;
-}
-
-.fa-angle-left {
-	border: 1px solid gray;
-	padding: 6px 10px;
-	border-radius: 100%;
-}
-
 .fa-angle-right {
 	border: 1px solid gray;
 	padding: 6px 10px;
 	border-radius: 100%;
 }
 
-.filter-btn button:hover {
-	cursor: pointer;
-	transform: translateY(-1px);
-	transition: box-shadow 0.2s ease;
-	box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+.chips-scrollRight {
+	display: none;
+	align-items: center;
+	margin-top: -7px;
+
+	margin-right: 7px;
+}
+
+.fa-angle-left {
+	border: 1px solid gray;
+	padding: 6px 10px;
+	border-radius: 100%;
 }
 
 .fa-angle-right:hover,
@@ -116,13 +102,18 @@
 	box-shadow: rgb(0 0 0 / 16%) 0 0 10px;
 }
 
-.filter-btn {
+.arrow-and-filter-btn {
+	display: flex;
+	gap: 20px;
+}
+
+.filter-btn-div {
 	display: flex;
 	align-items: center;
 	margin-top: -7px;
 }
 
-.filter-btn button {
+.filter-btn-div button {
 	display: flex;
 	gap: 8px;
 	height: 50px;
@@ -132,7 +123,16 @@
 	border-radius: 15px;
 }
 
+.filter-btn-div button:hover {
+	cursor: pointer;
+	transform: translateY(-1px);
+	transition: box-shadow 0.2s ease;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+/* Fadeout Divs Im not using anymore but keeping them just in case */
 /* Fadeouts Left */
+/*
 .fadeoutLeft {
 	position: absolute;
 	height: 100%;
@@ -140,9 +140,6 @@
 	left: 0px;
 	opacity: 1;
 	background-color: white;
-
-	/* HERE  */
-	display: none;
 }
 
 .fadeout-1 {
@@ -194,8 +191,10 @@
 	left: 70px;
 	opacity: 0;
 }
+*/
 
 /* Fadeouts Right*/
+/*
 .fadeoutRight {
 	position: absolute;
 	height: 100%;
@@ -253,4 +252,15 @@
 .fadeout10 {
 	right: 70px;
 	opacity: 0;
+}
+*/
+
+@media (max-width: 500px) {
+	.filter-btn-div {
+		display: none;
+	}
+
+	.chips-scrollRight {
+		display: flex;
+	}
 }
