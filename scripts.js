@@ -59,6 +59,7 @@ const elements = {
 	});
 
 	// Add Click Event Listeners
+	// Scroll Arrows
 	document
 		.querySelector(".chips-scrollLeft")
 		.addEventListener("click", () => onScrollLeftClick());
@@ -67,14 +68,16 @@ const elements = {
 		.querySelector(".chips-scrollRight")
 		.addEventListener("click", () => onScrollRightClick());
 
+	// Modal Languages
 	document
 		.querySelector(".fa-globe")
-		.addEventListener("click", () => onGlobeClick());
+		.addEventListener("click", () => openModal());
 
 	document
 		.querySelector(".close-modal-btn")
 		.addEventListener("click", () => closeModal());
 
+	// User Menu
 	document
 		.querySelector(".profile-menu-btn")
 		.addEventListener("click", () => profileMenuToggle());
@@ -98,7 +101,7 @@ function onScrollLeftClick() {
 	document.querySelector(".chips").scrollLeft += 70;
 }
 
-const onGlobeClick = () => (elements.modalLanguage().style.display = "flex");
+const openModal = () => (elements.modalLanguage().style.display = "flex");
 
 const closeModal = () => (elements.modalLanguage().style.display = "none");
 
