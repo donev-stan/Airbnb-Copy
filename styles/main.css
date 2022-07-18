@@ -46,6 +46,11 @@ main .container {
 	transition: color 0.5s ease;
 }
 
+.img-box .heart-btn .fa-heart:hover {
+	transition: color 0.3s ease;
+	color: red;
+}
+
 .favourite {
 	transition: color 0.5s ease;
 	color: red;
