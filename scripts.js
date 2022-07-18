@@ -5,6 +5,8 @@ const elements = {
 
 	modalLanguage: () => document.getElementById("modal-language"),
 	languageItems: () => document.querySelectorAll(".language-item"),
+
+	profileMenuBtn: () => document.querySelector(".profile-menu-btn"),
 };
 
 (() => {
@@ -72,6 +74,10 @@ const elements = {
 	document
 		.querySelector(".close-modal-btn")
 		.addEventListener("click", () => closeModal());
+
+	document
+		.querySelector(".profile-menu-btn")
+		.addEventListener("click", () => profileMenuToggle());
 })();
 
 function onScrollRightClick() {
@@ -95,3 +101,6 @@ function onScrollLeftClick() {
 const onGlobeClick = () => (elements.modalLanguage().style.display = "flex");
 
 const closeModal = () => (elements.modalLanguage().style.display = "none");
+
+const profileMenuToggle = () =>
+	document.querySelector(".popup-menu").classList.toggle("show");

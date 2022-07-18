@@ -12,8 +12,6 @@ header {
 .right-menu {
 	display: flex;
 	flex: 1;
-
-	/* border: 1px solid salmon; */
 }
 
 .logo {
@@ -70,6 +68,10 @@ header {
 .right-menu {
 	justify-content: flex-end;
 	align-items: center;
+}
+
+.profile-menu-btn {
+	position: relative;
 }
 
 .right-menu button {

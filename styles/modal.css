@@ -51,7 +51,7 @@
 	font-size: 32px;
 	font-weight: lighter;
 
-	padding: 0px 8px;
+	padding: 0px 10px;
 	border-radius: 100%;
 }
 
@@ -118,6 +118,7 @@
 
 .lannguage-items .language-item {
 	border-radius: 10px;
+	border: 1px solid white;
 }
 
 .lannguage-items .language-item:hover {
@@ -135,7 +136,7 @@
 }
 
 .selected-lang-item {
-	border: 1px solid black;
+	border: 1px solid black !important;
 }
 
 /* Switch */
