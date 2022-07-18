@@ -2,9 +2,17 @@ const elements = {
 	filter: () => document.querySelector(".filters"),
 	chips: () => document.querySelectorAll(".chip"),
 	hearts: () => document.querySelectorAll(".fa-heart"),
+
+	modalLanguage: () => document.getElementById("modal-language"),
+	languageItems: () => document.querySelectorAll(".language-item"),
 };
 
 (() => {
+	// Close modal on outside click
+	window.onclick = (event) => {
+		event.target == elements.modalLanguage() ? closeModal() : null;
+	};
+
 	// Set shadow on filter on scroll
 	window.onscroll = () => {
 		const scrolled =
@@ -35,6 +43,19 @@ const elements = {
 		});
 	});
 
+	// Set Language
+	elements.languageItems().forEach((language) => {
+		language.addEventListener("click", () => {
+			// Remove the one selected
+			document
+				.querySelector(".selected-lang-item")
+				.classList.remove("selected-lang-item");
+
+			// select a new one
+			language.classList.add("selected-lang-item");
+		});
+	});
+
 	// Add Click Event Listeners
 	document
 		.querySelector(".chips-scrollLeft")
@@ -43,6 +64,14 @@ const elements = {
 	document
 		.querySelector(".chips-scrollRight")
 		.addEventListener("click", () => onScrollRightClick());
+
+	document
+		.querySelector(".fa-globe")
+		.addEventListener("click", () => onGlobeClick());
+
+	document
+		.querySelector(".close-modal-btn")
+		.addEventListener("click", () => closeModal());
 })();
 
 function onScrollRightClick() {
@@ -61,18 +90,8 @@ function onScrollLeftClick() {
 
 	// Scroll Chips left by 70 pixels
 	document.querySelector(".chips").scrollLeft += 70;
-
-	/*
-	// Keep right fadeout in place acording to scroll
-	document
-		.querySelectorAll(".fadeoutRight")
-		.forEach((line, index) => {
-			line.style.right = `-${scrollWidth - index * lineWidth}px`;
-		});
-
-	// Keep left fadeout in place acording to scroll
-	document.querySelectorAll(".fadeoutLeft").forEach((line, index) => {
-		line.style.left = `+${scrollWidth + index * lineWidth}px`;
-	});
-	*/
 }
+
+const onGlobeClick = () => (elements.modalLanguage().style.display = "flex");
+
+const closeModal = () => (elements.modalLanguage().style.display = "none");
