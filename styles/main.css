@@ -7,13 +7,14 @@ main {
 	height: fit-content;
 
 	opacity: 1;
+	transition: opacity 0.4s ease;
 }
 
 .box:hover {
 	transition: transform 0.3s ease;
 	transition: opacity 0.4s ease;
 	opacity: 0.9;
-	transform: translateY(-1px);
+	/* transform: translateY(-1px); */
 }
 
 main .container {
