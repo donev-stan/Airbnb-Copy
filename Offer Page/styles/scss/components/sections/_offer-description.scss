@@ -1,0 +1,17 @@
+@use "../../abstracts/index" as *;
+
+.offer-description {
+	margin-top: 32px;
+	margin-bottom: 48px;
+
+	.show-more {
+		margin-top: 16px;
+		cursor: pointer;
+		width: fit-content;
+		font-weight: bold;
+
+		a {
+			color: black;
+		}
+	}
+}

@@ -1,0 +1,227 @@
+@use "../abstracts/index" as *;
+
+footer {
+	width: 100%;
+	background-color: #f7f7f7;
+	border-top: 1px solid lightgray;
+
+	.container {
+		padding: 48px 0;
+	}
+
+	.hr-div {
+		border-bottom: 1px solid $grayColor;
+	}
+
+	.location-options {
+		.container {
+			@include flexContainer(column, center, flex-start);
+
+			text-align: start;
+
+			.options {
+				@include flexContainer(row, flex-start, center);
+
+				flex-wrap: wrap;
+				min-height: 120px;
+				margin: 48px 0 24px 0;
+
+				.option {
+					width: 284px;
+					height: 40px;
+
+					a {
+						text-decoration: none;
+						color: #717171;
+					}
+				}
+			}
+
+			.nav-breadcrumb {
+				a {
+					font-size: 14px;
+					text-decoration: none;
+					color: black;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	.footer-links {
+		.container {
+			@include flexContainer(row, flex-start, flex-start);
+
+			align-items: flex-start;
+			gap: 25px;
+			flex-wrap: wrap;
+
+			.support,
+			.community,
+			.hosting,
+			.airbnb {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				width: 262px;
+
+				.links {
+					@include flexContainer(column, flex-start, flex-start);
+					gap: 20px;
+					font-size: 14px;
+					a {
+						text-decoration: none;
+						color: black;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer-menu {
+		.container {
+			@include flexContainer(row, space-between, center);
+			border-top: 1px solid $grayColor;
+			padding: 24px 0;
+
+			a {
+				text-decoration: none;
+				color: black;
+
+				&:hover {
+					cursor: pointer;
+					text-decoration: underline;
+				}
+			}
+
+			.left-menu {
+				font-size: 14px;
+			}
+
+			.right-menu {
+				@include flexContainer(row, flex-end, center);
+				gap: 30px;
+
+				.language {
+					@include flexContainer(row, flex-end, center);
+					gap: 10px;
+
+					.fa-globe {
+						cursor: pointer;
+					}
+				}
+
+				.social-media {
+					@include flexContainer(row, flex-end, center);
+					gap: 25px;
+
+					.fa-facebook-f,
+					.fa-twitter,
+					.fa-instagram-square {
+						font-size: 20px;
+						&:hover {
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1350px) {
+	footer {
+		.location-options {
+			.container {
+				.options {
+					.option {
+						width: 150px;
+					}
+				}
+			}
+		}
+
+		.footer-links {
+			.container {
+				gap: 20px !important;
+
+				.support,
+				.community,
+				.hosting,
+				.airbnb {
+					width: 100%;
+					border-bottom: 1px solid $grayColor;
+					padding-bottom: 20px;
+
+					.links {
+						flex-direction: row !important;
+						flex-wrap: wrap !important;
+						justify-content: flex-start !important;
+						gap: 15px 50px !important;
+					}
+				}
+
+				.airbnb {
+					border: none;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	footer {
+		.footer-menu {
+			.container {
+				@include flexContainer(column, center, center);
+				gap: 10px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 1420px) {
+	footer {
+		.location-options {
+			.container {
+				.options {
+					.option {
+						width: 262px;
+					}
+				}
+			}
+		}
+
+		.footer-links {
+			.container {
+				gap: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	footer {
+		.footer-links {
+			.container {
+				.support,
+				.community,
+				.hosting,
+				.airbnb {
+					.links {
+						flex-direction: column !important;
+					}
+				}
+			}
+		}
+	}
+}

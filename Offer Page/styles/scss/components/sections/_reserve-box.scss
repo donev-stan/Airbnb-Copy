@@ -1,0 +1,215 @@
+@use "../../abstracts/index" as *;
+
+$borderGrayColor: rgb(172, 172, 172);
+
+.right-content {
+	gap: 24px;
+	height: 1935px;
+	margin: auto;
+	margin-top: 46px;
+
+	@include flexContainer(row, center, flex-start);
+	.container-right {
+		width: 80%;
+		position: sticky;
+		top: 100px;
+		max-width: 350px;
+
+		.reserve-box {
+			padding: 24px;
+			margin-bottom: 24px;
+
+			max-width: 480px;
+
+			border: 1px solid rgb(221, 221, 221);
+			border-radius: 12px;
+			box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+
+			@include flexContainer(column, flex-start, space-between);
+
+			.form {
+				border: 1px solid $borderGrayColor;
+				border-radius: 8px;
+				margin-top: 24px;
+				cursor: pointer;
+
+				.check-in-out {
+					@include flexContainer(row, flex-start, space-between);
+					height: 56px;
+
+					.check-out {
+						@include flexContainer(column, center, flex-start);
+						flex: 1;
+
+						border-bottom: 1px solid $borderGrayColor;
+						padding: 10px;
+
+						.heading-span {
+							text-transform: uppercase;
+							font-weight: bold;
+							font-size: 10px;
+							padding-bottom: 5px;
+						}
+
+						.date-span {
+							color: rgb(99, 99, 99);
+							font-size: 15px;
+						}
+					}
+
+					.check-in {
+						@extend .check-out;
+						border-right: 1px solid $borderGrayColor;
+					}
+				}
+
+				.guests {
+					@include flexContainer(row, flex-start, center);
+					height: 56px;
+					padding: 0 10px;
+
+					.text {
+						@include flexContainer(column, center, flex-start);
+						flex: 1;
+
+						.heading-span {
+							text-transform: uppercase;
+							font-weight: bold;
+							font-size: 10px;
+							padding-bottom: 5px;
+						}
+
+						.option-span {
+							color: rgb(99, 99, 99);
+							font-size: 15px;
+						}
+					}
+
+					.more-options {
+						@include flexContainer(row, flex-end, center);
+						flex: 1;
+					}
+				}
+			}
+
+			a {
+				color: black;
+			}
+
+			.price-and-rating {
+				@include flexContainer(row, space-between, center);
+				gap: 5px;
+
+				.price {
+					.price-span {
+						font-size: 22px;
+					}
+				}
+
+				.rating {
+					font-size: 15px;
+
+					a {
+						color: gray;
+					}
+				}
+			}
+
+			.reserve-btn {
+				margin-top: 16px;
+				cursor: pointer;
+
+				background: linear-gradient(
+					to right,
+					rgb(230, 30, 77) 0%,
+					rgb(227, 28, 95) 50%,
+					rgb(215, 4, 102) 100%
+				) !important;
+
+				// transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+				// 	-webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
+
+				// -webkit-tap-highlight-color: transparent !important;
+
+				// background-position: calc((100 - var(--mouse-x, 0)) * 1%)
+				// 	calc((100 - var(--mouse-y, 0)) * 1%);
+
+				color: white;
+				font-size: 16px;
+				font-weight: bold;
+				text-align: center;
+
+				padding: 14px 24px;
+
+				border-radius: 8px;
+			}
+
+			.reserve-info {
+				margin-top: 15px;
+				text-align: center;
+				color: rgb(34, 34, 34) !important;
+			}
+
+			.pricing-info {
+				margin-top: 24px;
+				@include flexContainer(column, center, space-between);
+				gap: 20px;
+
+				.info {
+					@include flexContainer(row, space-between, center);
+
+					.price-span {
+						@include flexContainer(row, flex-end, center);
+						min-width: 90px;
+					}
+				}
+			}
+
+			.total-price {
+				@include flexContainer(row, space-between, center);
+				font-weight: bold;
+			}
+		}
+
+		.rare-find {
+			padding: 24px;
+			margin-bottom: 24px;
+
+			border: 1px solid rgb(221, 221, 221);
+			border-radius: 12px;
+
+			@include flexContainer(row, flex-start, center);
+			gap: 20px;
+
+			.fa-gem {
+				font-size: 34px;
+				color: $primaryColor;
+			}
+		}
+
+		.report {
+			@include flexContainer(row, center, flex-start);
+			gap: 20px;
+			color: gray;
+			margin: auto;
+
+			a {
+				color: gray;
+			}
+		}
+	}
+}
+
+@media (max-width: 1370px) {
+	.right-content {
+		@include flexContainer(row, flex-end, flex-start);
+		.container-right {
+			width: 90%;
+			.reserve-box {
+				.price-and-rating {
+					@include flexContainer(column, space-between, flex-start);
+				}
+			}
+		}
+	}
+}

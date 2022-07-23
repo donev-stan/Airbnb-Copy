@@ -1,0 +1,176 @@
+@use "../abstracts/index" as *;
+
+header {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+
+	z-index: 1;
+	background-color: white;
+
+	.container {
+		@include flexContainer(row, space-between, center);
+
+		.img-box {
+			@include flexContainer(row, flex-start, center);
+			flex: 1;
+
+			img {
+				width: 110px;
+				height: 34px;
+				cursor: pointer;
+			}
+		}
+
+		.search-box {
+			@include flexContainer(row, center, center);
+			flex: 1;
+
+			.search {
+				@include flexContainer(row, center, center);
+				gap: 100px;
+				padding: 7px;
+
+				border: 1px solid $grayColor;
+				border-radius: 40px;
+				box-shadow: 0 1px 2px rgb(0 0 0 / 8%),
+					0 4px 12px rgb(0 0 0 / 5%);
+
+				&:hover {
+					@include hoverAnimation;
+				}
+
+				#search-text {
+					font-size: 14px;
+					font-weight: 600;
+					margin-left: 15px;
+				}
+
+				.fa-magnifying-glass {
+					color: white;
+					background-color: $primaryColor;
+					font-size: 14px;
+					padding: 8px;
+					border-radius: 100%;
+				}
+			}
+		}
+
+		.menu-box {
+			@include flexContainer(row, flex-end, center);
+			flex: 1;
+
+			.menu-btn {
+				@include flexContainer(row, center, center);
+				gap: 5px;
+
+				margin-left: 5px;
+
+				border: 1px solid $grayColor;
+				border-radius: 21px;
+
+				padding: 5px;
+
+				&:hover {
+					@include hoverAnimation;
+				}
+
+				.fa-circle-user {
+					font-size: 30px;
+					color: rgb(122, 122, 122);
+				}
+
+				.fa-bars {
+					font-size: 16px;
+					padding: 0 8px;
+				}
+			}
+
+			#host-text,
+			.fa-globe {
+				border-radius: 22px;
+				padding: 14px;
+
+				&:hover {
+					cursor: pointer;
+					background-color: $hoverGrayColor;
+				}
+			}
+		}
+	}
+
+	max-width: 1760px;
+	width: 100%;
+	height: 80px;
+	margin: auto;
+
+	border-bottom: 1px solid $grayColor;
+}
+
+@media (max-width: 1100px) {
+	header {
+		.container {
+			.search-box,
+			.menu-box {
+				flex: 2;
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	header {
+		.container {
+			.img-box {
+				flex: 0;
+				margin-right: 15px;
+				img {
+					content: url("../../img/logo.png");
+					width: 38px;
+					height: auto;
+				}
+			}
+
+			.search-box {
+				.search {
+					gap: 80px;
+				}
+			}
+
+			.menu-box {
+				flex: 0;
+
+				#host-text {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 567px) {
+	header {
+		.container {
+			.search-box {
+				.search {
+					justify-content: flex-end !important;
+					width: 100%;
+					#search-text {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	header {
+		.search-box {
+			.search {
+				gap: 20px;
+			}
+		}
+	}
+}

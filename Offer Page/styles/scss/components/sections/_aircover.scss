@@ -1,0 +1,19 @@
+@use "../../abstracts/index" as *;
+
+.aircover {
+	margin: 32px 0;
+
+	img {
+		width: 124px;
+		height: 26px;
+	}
+
+	p {
+		margin: 16px 0;
+	}
+
+	a {
+		color: black;
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,34 @@
+@use "../../abstracts/index" as *;
+
+.sleep-option {
+	margin: 48px 0;
+
+	.heading {
+		margin-bottom: 24px;
+	}
+
+	.options {
+		@include flexContainer(row, flex-start, center);
+		gap: 20px;
+
+		.option {
+			@include flexContainer(column, center, flex-start);
+			gap: 10px;
+
+			width: 150px;
+			border: 1px solid lightgray;
+			border-radius: 12px;
+			padding: 24px;
+
+			i {
+				font-size: 20px;
+				color: $iconColor;
+				margin-bottom: 10px;
+			}
+
+			.text {
+				font-size: 14px;
+			}
+		}
+	}
+}

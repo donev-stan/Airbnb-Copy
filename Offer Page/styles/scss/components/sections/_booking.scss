@@ -1,0 +1,226 @@
+@use "../../abstracts/index" as *;
+
+.booking {
+	margin: 48px 0;
+
+	.heading {
+		@include flexContainer(column, flex-start, flex-start);
+		gap: 8px;
+		margin-bottom: 32px;
+	}
+
+	.calendars {
+		@include flexContainer(row, center, flex-start);
+		gap: 30px;
+		margin-bottom: 20px;
+
+		.calendar-left,
+		.calendar-right {
+			@include flexContainer(column, center, center);
+			flex: 1;
+
+			.calendar-date {
+				@include flexContainer(row, center, center);
+				width: 100%;
+				// margin: auto;
+
+				position: relative;
+
+				.fa-chevron-left {
+					position: absolute;
+					left: 25px;
+					padding: 8px 12px;
+					border-radius: 100%;
+					cursor: pointer;
+
+					&:hover {
+						background-color: $hoverGrayColor;
+					}
+				}
+
+				.fa-chevron-right {
+					position: absolute;
+					right: 25px;
+
+					padding: 8px 12px;
+					border-radius: 100%;
+					cursor: pointer;
+
+					&:hover {
+						background-color: $hoverGrayColor;
+					}
+				}
+			}
+		}
+
+		table {
+			// border: 1px solid black;
+			text-align: center;
+			font-size: 14px;
+			border: none;
+			border-collapse: collapse;
+
+			th,
+			td {
+				min-width: 48px;
+				height: 48px;
+				// margin: -1;
+				// border: 1px solid black;
+			}
+
+			td {
+				color: gray;
+			}
+
+			.circle {
+				@include flexContainer(column, center, center);
+				height: 100%;
+				border-radius: 100px;
+				background-color: black;
+				color: white;
+			}
+
+			.circle-hover {
+				&:hover {
+					@extend .circle;
+					background-color: white;
+					color: black;
+					border: 1px solid black;
+				}
+			}
+
+			.strike {
+				text-decoration: line-through;
+			}
+
+			.stay-period {
+				color: black;
+				background-color: $grayColor;
+				// border-left: 5px solid $grayColor;
+				cursor: pointer;
+			}
+
+			.stay-period:first-child {
+				border-top-left-radius: 100%;
+				border-bottom-left-radius: 100%;
+			}
+
+			.stay-period:nth-child(6) {
+				border-top-right-radius: 100%;
+				border-bottom-right-radius: 100%;
+			}
+		}
+	}
+
+	.calendar-controls {
+		@include flexContainer(row, space-between, center);
+
+		.keyboard-input {
+			margin-left: 25px;
+			.fa-keyboard {
+				font-size: 20px;
+				padding: 12px;
+				border-radius: 100%;
+
+				&:hover {
+					cursor: pointer;
+					background-color: $hoverGrayColor;
+				}
+			}
+		}
+
+		.clear-date {
+			margin-right: 25px;
+			padding: 8px;
+			border-radius: 8px;
+
+			a {
+				color: black;
+				font-size: 15px;
+			}
+
+			&:hover {
+				cursor: pointer;
+				background-color: $hoverGrayColor;
+			}
+		}
+	}
+}
+
+@media (max-width: 1450px) {
+	.booking {
+		.calendars {
+			.calendar-right {
+				display: none;
+				flex: 0;
+
+				.calendar-date {
+					span,
+					i {
+						display: none;
+					}
+					display: none;
+				}
+
+				table {
+					display: none;
+				}
+			}
+
+			.calendar-left {
+				table {
+					width: 90% !important;
+
+					th,
+					td {
+						height: 80px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1250px) {
+	.booking {
+		.calendars {
+			.calendar-left {
+				table {
+					width: 90% !important;
+
+					th,
+					td {
+						height: 70px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 950px) {
+	.booking {
+		.calendars {
+			.calendar-left {
+				table {
+					width: 100% !important;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.booking {
+		.calendars {
+			.calendar-left {
+				table {
+					th,
+					td {
+						height: 60px;
+					}
+				}
+			}
+		}
+	}
+}

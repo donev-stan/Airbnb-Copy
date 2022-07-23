@@ -1,0 +1,32 @@
+@use "../../abstracts/index" as *;
+
+.info-and-hostImg {
+	margin-top: 48px;
+	margin-bottom: 24px;
+
+	@include flexContainer(row, space-between, center);
+
+	.info {
+		@include flexContainer(column, flex-start, flex-start);
+		gap: 8px;
+	}
+
+	.hostImg {
+		position: relative;
+		cursor: pointer;
+
+		#hostImg {
+			height: 56px;
+			width: 56px;
+
+			border-radius: 100%;
+		}
+
+		#medalImg {
+			position: absolute;
+			width: 25px;
+			bottom: 2px;
+			right: -7px;
+		}
+	}
+}
