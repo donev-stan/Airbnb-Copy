@@ -10,7 +10,7 @@ main {
 				margin-bottom: 32px;
 
 				span {
-					font-size: 22px;
+					font-size: 1.4rem;
 					// font-weight: bold;
 				}
 			}
@@ -32,7 +32,7 @@ main {
 						width: 100%;
 
 						.title {
-							font-size: 16px;
+							font-size: 1rem;
 						}
 
 						.rating {
@@ -66,7 +66,7 @@ main {
 								width: 28px;
 								text-align: end;
 								span {
-									font-size: 14px;
+									font-size: 0.8rem;
 									// font-weight: bold;
 								}
 							}
@@ -87,7 +87,9 @@ main {
 						text-overflow: ellipsis;
 						// white-space: nowrap;
 						height: 72px;
-						font-size: 16px;
+						font-size: 1rem;
+						-webkit-line-clamp: 3;
+						-webkit-box-orient: vertical;
 					}
 
 					.show-more {
@@ -124,8 +126,9 @@ main {
 
 					.name-and-date {
 						p {
+							margin-top: 5px;
 							color: #717171;
-							font-size: 14px;
+							font-size: 0.8rem;
 						}
 					}
 				}
@@ -196,6 +199,19 @@ main {
 				.ratings {
 					@include flexContainer(column, flex-start, flex-start);
 					gap: 15px;
+
+					.left-box,
+					.right-box {
+						width: 100%;
+					}
+				}
+
+				.review-comments {
+					.left-box,
+					.right-box {
+						width: 100%;
+						min-width: 0;
+					}
 				}
 			}
 		}

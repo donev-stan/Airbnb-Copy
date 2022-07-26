@@ -20,14 +20,37 @@ main {
 				.container {
 					width: 100%;
 				}
-
-				// border: 1px solid black;
 			}
 
 			.right-content {
 				width: 40%;
+			}
+		}
+	}
+}
 
-				// border: 1px solid black;
+@media (max-width: 768px) {
+	main {
+		.multiple-main-sections {
+			.container {
+				@include flexContainer(column, flex-start, flex-start);
+
+				.left-content,
+				.right-content {
+					width: 100%;
+
+					.container {
+						width: 100%;
+					}
+
+					// border: 1px solid black;
+				}
+
+				.right-content {
+					@include flexContainer(column, flex-start, center);
+					height: auto;
+					margin: 0 0 24px 0;
+				}
 			}
 		}
 	}

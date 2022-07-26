@@ -9,15 +9,9 @@ footer {
 		padding: 48px 0;
 	}
 
-	.hr-div {
-		border-bottom: 1px solid $grayColor;
-	}
-
 	.location-options {
 		.container {
 			@include flexContainer(column, center, flex-start);
-
-			text-align: start;
 
 			.options {
 				@include flexContainer(row, flex-start, center);
@@ -39,7 +33,7 @@ footer {
 
 			.nav-breadcrumb {
 				a {
-					font-size: 14px;
+					font-size: 0.9rem;
 					text-decoration: none;
 					color: black;
 
@@ -55,7 +49,6 @@ footer {
 		.container {
 			@include flexContainer(row, flex-start, flex-start);
 
-			align-items: flex-start;
 			gap: 25px;
 			flex-wrap: wrap;
 
@@ -63,18 +56,18 @@ footer {
 			.community,
 			.hosting,
 			.airbnb {
-				display: flex;
-				flex-direction: column;
+				@include flexContainer(column, flex-start, flex-start);
 				gap: 20px;
 				width: 262px;
 
 				.links {
 					@include flexContainer(column, flex-start, flex-start);
 					gap: 20px;
-					font-size: 14px;
+					font-size: 0.9rem;
+
 					a {
 						text-decoration: none;
-						color: black;
+						color: $linkColor;
 
 						&:hover {
 							text-decoration: underline;
@@ -102,7 +95,7 @@ footer {
 			}
 
 			.left-menu {
-				font-size: 14px;
+				font-size: 0.9rem;
 			}
 
 			.right-menu {
@@ -130,6 +123,58 @@ footer {
 							cursor: pointer;
 						}
 					}
+				}
+			}
+		}
+	}
+
+	.mobile-footer {
+		display: none;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 80px;
+		background-color: white;
+
+		border-top: 1px solid $grayColor;
+
+		.container {
+			@include flexContainer(row, center, center);
+			padding: 0 !important;
+			width: 95%;
+
+			.price,
+			.reserve {
+				flex: 1;
+			}
+
+			.price {
+				@include flexContainer(column, center, flex-start);
+
+				a {
+					color: rgb(34, 34, 34);
+				}
+			}
+
+			.reserve {
+				flex: 1;
+
+				@include flexContainer(row, flex-end, center);
+
+				.reserve-btn {
+					border-radius: 8px;
+					color: white;
+					font-weight: bold;
+					text-align: center;
+					border: 1px solid green;
+					padding: 14px 24px;
+					background: linear-gradient(
+						to right,
+						rgb(230, 30, 77) 0%,
+						rgb(227, 28, 95) 50%,
+						rgb(215, 4, 102) 100%
+					) !important;
 				}
 			}
 		}
@@ -169,8 +214,8 @@ footer {
 				}
 
 				.airbnb {
-					border: none;
-					padding-bottom: 0;
+					border: none !important;
+					padding-bottom: 0 !important;
 				}
 			}
 		}
@@ -222,6 +267,17 @@ footer {
 					}
 				}
 			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	footer {
+		.footer-menu {
+			margin-bottom: 80px;
+		}
+		.mobile-footer {
+			display: block;
 		}
 	}
 }

@@ -47,13 +47,13 @@ $borderGrayColor: rgb(172, 172, 172);
 						.heading-span {
 							text-transform: uppercase;
 							font-weight: bold;
-							font-size: 10px;
+							font-size: 0.6rem;
 							padding-bottom: 5px;
 						}
 
 						.date-span {
 							color: rgb(99, 99, 99);
-							font-size: 15px;
+							font-size: 0.9rem;
 						}
 					}
 
@@ -75,13 +75,13 @@ $borderGrayColor: rgb(172, 172, 172);
 						.heading-span {
 							text-transform: uppercase;
 							font-weight: bold;
-							font-size: 10px;
+							font-size: 0.5rem;
 							padding-bottom: 5px;
 						}
 
 						.option-span {
 							color: rgb(99, 99, 99);
-							font-size: 15px;
+							font-size: 0.9rem;
 						}
 					}
 
@@ -102,12 +102,12 @@ $borderGrayColor: rgb(172, 172, 172);
 
 				.price {
 					.price-span {
-						font-size: 22px;
+						font-size: 1.3rem;
 					}
 				}
 
 				.rating {
-					font-size: 15px;
+					font-size: 0.9rem;
 
 					a {
 						color: gray;
@@ -135,7 +135,7 @@ $borderGrayColor: rgb(172, 172, 172);
 				// 	calc((100 - var(--mouse-y, 0)) * 1%);
 
 				color: white;
-				font-size: 16px;
+				font-size: 1rem;
 				font-weight: bold;
 				text-align: center;
 

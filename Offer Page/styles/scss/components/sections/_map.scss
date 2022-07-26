@@ -30,3 +30,33 @@ main {
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	main {
+		.map {
+			margin: 48px 0;
+
+			.container {
+				iframe {
+					border-radius: 5px;
+					height: 340px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 568px) {
+	main {
+		.map {
+			margin: 48px 0;
+
+			.container {
+				iframe {
+					border-radius: 5px;
+					height: 280px;
+				}
+			}
+		}
+	}
+}
