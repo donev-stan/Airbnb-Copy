@@ -1,7 +1,5 @@
-# Airbnb Design Copy
-
-## Airbnb Offer
+## Airbnb Offer Design Copy
 https://copyofairbnboffer.netlify.app/
 
-## Airbnb Front Page
+## Airbnb Front Page Design Copy
 https://copyofairbnb.netlify.app
