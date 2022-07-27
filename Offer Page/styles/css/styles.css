@@ -1075,11 +1075,10 @@ main .reviews .container .review-comments {
 main .reviews .container .review-comments .comment p {
   line-height: 24px;
   overflow: hidden;
-  text-overflow: ellipsis;
-  height: 72px;
   font-size: 1rem;
-  -webkit-line-clamp: 3;
+  display: -webkit-box;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 main .reviews .container .review-comments .comment .show-more {
   margin-top: 8px;
