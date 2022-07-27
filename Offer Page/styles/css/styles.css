@@ -310,6 +310,9 @@ main .heading-and-images .container .images-box .all-photos-btn:hover {
   main .heading-and-images .container .heading-box .share-and-save-box {
     align-self: center;
   }
+  main .heading-and-images .container img {
+    height: 300px !important;
+  }
 }
 .info-and-hostImg {
   margin-top: 48px;
@@ -1150,6 +1153,12 @@ main .reviews .container .review-comments .right-box {
   main .reviews .container .review-comments .left-box .comment p,
 main .reviews .container .review-comments .right-box .comment p {
     max-height: 46px;
+    -webkit-line-clamp: 2;
+  }
+}
+@media (max-width: 900px) {
+  main .reviews .container {
+    width: 95%;
   }
 }
 @media (max-width: 800px) {
@@ -1658,6 +1667,19 @@ footer .footer-links .container .airbnb .links {
     padding-bottom: 0 !important;
   }
 }
+@media (max-width: 1420px) {
+  footer .location-options .container .options .option {
+    width: 262px;
+  }
+  footer .footer-links .container {
+    gap: 0;
+  }
+}
+@media (max-width: 1250px) {
+  footer .container {
+    width: 90%;
+  }
+}
 @media (max-width: 1100px) {
   footer .footer-menu .container {
     display: flex !important;
@@ -1668,12 +1690,9 @@ footer .footer-links .container .airbnb .links {
     text-align: center;
   }
 }
-@media (max-width: 1420px) {
-  footer .location-options .container .options .option {
-    width: 262px;
-  }
-  footer .footer-links .container {
-    gap: 0;
+@media (max-width: 900px) {
+  footer .container {
+    width: 95%;
   }
 }
 @media (max-width: 600px) {

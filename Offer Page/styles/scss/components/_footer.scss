@@ -222,18 +222,6 @@ footer {
 	}
 }
 
-@media (max-width: 1100px) {
-	footer {
-		.footer-menu {
-			.container {
-				@include flexContainer(column, center, center);
-				gap: 10px;
-				text-align: center;
-			}
-		}
-	}
-}
-
 @media (max-width: 1420px) {
 	footer {
 		.location-options {
@@ -250,6 +238,34 @@ footer {
 			.container {
 				gap: 0;
 			}
+		}
+	}
+}
+
+@media (max-width: 1250px) {
+	footer {
+		.container {
+			width: 90%;
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	footer {
+		.footer-menu {
+			.container {
+				@include flexContainer(column, center, center);
+				gap: 10px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	footer {
+		.container {
+			width: 95%;
 		}
 	}
 }

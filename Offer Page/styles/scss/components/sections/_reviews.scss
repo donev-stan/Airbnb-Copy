@@ -180,10 +180,21 @@ main {
 						.comment {
 							p {
 								max-height: 46px;
+								-webkit-line-clamp: 2;
 							}
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	main {
+		.reviews {
+			.container {
+				width: 95%;
 			}
 		}
 	}
