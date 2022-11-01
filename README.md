@@ -15,4 +15,14 @@
   ![image](https://user-images.githubusercontent.com/77002111/199259690-03ae9c45-14ee-42df-8016-687baa90971c.png)
 
 ## Airbnb Offer Design Copy
+  ### Hosted: 
   https://copyofairbnboffer.netlify.app/
+
+  ### Preview
+  ![image](https://user-images.githubusercontent.com/77002111/199259902-8622efd9-edb8-4a34-b50d-87e30e48be2d.png)
+
+  ### Mobile Preview
+  ![image](https://user-images.githubusercontent.com/77002111/199260206-f9fc2396-2b01-4a2c-8ee2-40bd25801597.png)
+
+  ### Tablet Preview
+  ![image](https://user-images.githubusercontent.com/77002111/199260397-4eab174b-1406-4a03-9bd9-0e24b1ed35b7.png)
